@@ -1,16 +1,17 @@
 package demoga.com.tests;
 
-import com.codeborne.selenide.Configuration;
 import demoga.com.data.Generator;
 import demoga.com.pages.RegistrationFormPage;
 import org.apache.commons.lang3.StringUtils;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import static java.lang.String.format;
 
-public class RegFormTests {
+@Tag("demoqa")
+public class RegFormTests extends TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     Generator gen = new Generator();
 
@@ -35,16 +36,9 @@ public class RegFormTests {
     String expectedLocation = format("%s %s", state, city);
     String expectedFileName = imgPath.substring(4);
 
-    @BeforeAll
-    static void prepare() {
-        Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.browser = "firefox";
-
-    }
 
     @Test
+    @DisplayName("Successful fill registration test")
     void execute() {
         registrationFormPage.openPage()
                 .setFirstName(firstName)

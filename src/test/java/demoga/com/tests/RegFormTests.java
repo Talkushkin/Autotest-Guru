@@ -8,7 +8,10 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+
+import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("demoqa")
 public class RegFormTests extends TestBase {
@@ -24,7 +27,7 @@ public class RegFormTests extends TestBase {
     String phoneNumber = gen.getPhoneNumber();
     String subject = gen.getSubject();
     String hobby = gen.getHobby();
-    String imgPath = "img/test.png";
+    String imgPath = "IMG_20170318_140030.jpg";
     String address = gen.getAddress();
     String state = gen.getState();
     String city = gen.getCity(state);
@@ -65,4 +68,23 @@ public class RegFormTests extends TestBase {
                 .checkResult("Address", address)
                 .checkResult("State and City", expectedLocation);
     }
+
+    @Test
+    void test1() {
+        registrationFormPage.openPage();
+        assertTrue(true);
+    }
+
+    @Test
+    void test2() {
+        assertTrue(true);
+
+    }
+
+    @Test
+    void test3() {
+        assertTrue(true);
+
+    }
+
 }

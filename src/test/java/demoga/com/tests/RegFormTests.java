@@ -3,6 +3,7 @@ package demoga.com.tests;
 import demoga.com.data.Generator;
 import demoga.com.pages.RegistrationFormPage;
 import org.apache.commons.lang3.StringUtils;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -42,6 +43,7 @@ public class RegFormTests extends TestBase {
 
     @Test
     @DisplayName("Successful fill registration test")
+    @Disabled
     void execute() {
         registrationFormPage.openPage()
                 .setFirstName(firstName)
@@ -70,21 +72,10 @@ public class RegFormTests extends TestBase {
     }
 
     @Test
+    @Disabled
     void test1() {
         registrationFormPage.openPage();
         assertTrue(true);
-    }
-
-    @Test
-    void test2() {
-        assertTrue(true);
-
-    }
-
-    @Test
-    void test3() {
-        assertTrue(true);
-
     }
 
 }

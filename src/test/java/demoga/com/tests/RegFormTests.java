@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -28,7 +27,7 @@ public class RegFormTests extends TestBase {
     String phoneNumber = gen.getPhoneNumber();
     String subject = gen.getSubject();
     String hobby = gen.getHobby();
-    String imgPath = "IMG_20170318_140030.jpg";
+    String imgPath = "resources/img/IMG_20170318_140030.jpg";
     String address = gen.getAddress();
     String state = gen.getState();
     String city = gen.getCity(state);
@@ -43,7 +42,6 @@ public class RegFormTests extends TestBase {
 
     @Test
     @DisplayName("Successful fill registration test")
-    @Disabled
     void execute() {
         registrationFormPage.openPage()
                 .setFirstName(firstName)

@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import demoga.com.pages.components.CalendarComponent;
 import demoga.com.pages.components.StateAndCityComponent;
 
+import java.io.File;
 import java.time.LocalDate;
 
 import static com.codeborne.selenide.Condition.text;

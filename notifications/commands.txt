@@ -1,6 +1,6 @@
 curl -X POST \
      -H 'Content-Type: application/json' \
-     -d '{"chat_id": "-1001680108107", "text": "i save your information", "disable_notification": false}' \
+     -d '{"chat_id": "-610030741", "text": "i save your information", "disable_notification": true}' \
      https://api.telegram.org/botXXX/sendMessage
 
 java \

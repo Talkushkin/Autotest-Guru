@@ -5,6 +5,8 @@ import demoga.com.tests.TestBase;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class SystemPropertiesTests extends TestBase {
     @Test
     void someTest1() {
@@ -41,9 +43,6 @@ public class SystemPropertiesTests extends TestBase {
     @Test
     @Tag("systemProperties")
     void someTest5() {
-        Selenide.open("https://vk.com/");
-        //System.out.println(" i want to say: " + System.getProperty("anyText"));
-
+    assertTrue(false);
     }
-
 }
